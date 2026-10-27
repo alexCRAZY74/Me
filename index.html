@@ -1,15 +1,125 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-<html>
-  <head>
-    <title>TODO supply a title</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-		<div>TODO write content</div>
-  </body>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Алексей Баяндин — Senior Fullstack / System Architect</title>
+  <meta name="description" content="32 года в разработке. Проектирую сложную бизнес-логику, архитектуру систем и автономные AI-агенты.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="css/avatar.jpg">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+			<div class="banner_avatar"></div>
+      <h1>Алексей Баяндин</h1>
+      <p class="role">Senior Fullstack / System Architect</p>
+      <p class="lead">
+        32 года в разработке. Проектирую сложную бизнес-логику,
+        выстраиваю архитектуру систем на базе ООП и строю автономные AI-системы.
+        Оптимизирую СУБД и привожу в порядок сложные legacy-системы.
+      </p>
+    </header>
+
+    <details class="card">
+      <summary>Опыт</summary>
+      <div class="content">
+        32 года в IT. 12 лет разработки и поддержки бэк-офиса высоконагруженного SaaS.
+        Проектирование сложной бизнес-логики с нуля, выстраивание архитектуры приложений,
+        разработка автономных AI-агентов и контекстных матриц.
+        Оптимизация работы с большими объемами данных и СУБД как часть общего инженерного цикла.
+      </div>
+    </details>
+
+    <details class="card">
+      <summary>Профессиональные навыки</summary>
+      <div class="content">
+        <p>
+          <strong>Backend и ООП:</strong>
+          PHP (25+ лет), Java, JavaFX, C#, JavaScript, REST API.
+          Выстраивание строгой объектно-ориентированной архитектуры и проектирование систем с нуля.
+        </p>
+        <p>
+          <strong>AI-инженерия:</strong>
+          архитектура автономных агентов, управление контекстом, интеграция LLM в среды разработки.
+        </p>
+        <p>
+          <strong>СУБД и SQL:</strong>
+          MySQL, MariaDB, PostgreSQL, работа с транзакциями, оптимизация тяжелых запросов.
+        </p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary>Личная информация</summary>
+      <div class="content">
+        Сначала разбираюсь в логике процессов, потом пишу код.
+        Технологии и ИИ — это просто инструменты для решения задач, а не цель.
+        Интересно проектировать системы с нуля, выстраивать красивую логику
+        и решать нетривиальные задачи, а не сидеть на однотипном конвейере.
+      </div>
+    </details>
+
+    <a class="cta" href="Senior Fullstack Developer.pdf" target="_blank" id="resume-btn">
+      ↓ Скачать резюме
+    </a>
+
+    <p class="links-title">Ссылки</p>
+    <div class="links">
+      <a class="link-btn" href="https://github.com/alexCRAZY74" target="_blank" rel="noopener">
+        <span class="link-icon">⌘</span>
+        <span class="meta">
+          <span>GitHub</span>
+          <small>alexCRAZY74 · код и проекты</small>
+        </span>
+      </a>
+
+      <a class="link-btn" href="https://baiandin.gumroad.com/" target="_blank" rel="noopener">
+        <span class="link-icon">▣</span>
+        <span class="meta">
+          <span>Gumroad</span>
+          <small>High-Load Warehouse Inventory System Prompt</small>
+        </span>
+      </a>
+
+      <a class="link-btn" href="https://www.facebook.com/alex.bayandin" target="_blank" rel="noopener">
+        <span class="link-icon">f</span>
+        <span class="meta">
+          <span>Facebook</span>
+          <small>alex.bayandin</small>
+        </span>
+      </a>
+
+      <a class="link-btn" href="https://www.youtube.com/@alexcrazy745" target="_blank" rel="noopener">
+        <span class="link-icon">▶</span>
+        <span class="meta">
+          <span>YouTube</span>
+          <small>@alexcrazy745</small>
+        </span>
+      </a>
+
+      <a class="link-btn" href="https://dev.to/alexcrazy74" target="_blank" rel="noopener">
+        <span class="link-icon">{}</span>
+        <span class="meta">
+          <span>DEV Community</span>
+          <small>статьи про СУБД и high-load</small>
+        </span>
+      </a>
+    </div>
+
+    <footer>
+      <p>Алексей Баяндин · Almaty</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('resume-btn').addEventListener('click', function (e) {
+      if (this.getAttribute('href') === '#') {
+        e.preventDefault();
+        alert('Положи PDF резюме в репозиторий (например, resume.pdf) и поменяй href у кнопки.');
+      }
+    });
+  </script>
+</body>
 </html>

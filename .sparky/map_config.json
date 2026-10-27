@@ -1,0 +1,150 @@
+{
+  "kanban_settings": {
+    "lists": [
+      {
+        "code": "workflow",
+        "title": "Статус задачи",
+        "options": [
+          {
+            "value": "todo",
+            "text": "Сделать",
+            "icon": "fa fa-circle-o",
+            "color": "#6c757d"
+          },
+          {
+            "value": "in_progress",
+            "text": "В работе",
+            "icon": "fa fa-play-circle",
+            "color": "#007bff"
+          },
+          {
+            "value": "return_test",
+            "text": "Возврат с теста",
+            "icon": "fa fa-arrow-circle-left",
+            "color": "#dc3545"
+          },
+          {
+            "value": "on_hold",
+            "text": "Отложена",
+            "icon": "fa fa-pause-circle",
+            "color": "#6c757d"
+          },
+          {
+            "value": "canceled",
+            "text": "Отменена",
+            "icon": "fa fa-times-circle",
+            "color": "#6c757d"
+          },
+          {
+            "value": "done",
+            "text": "Готово",
+            "icon": "fa fa-check-circle",
+            "color": "#28a745"
+          }
+        ]
+      },
+      {
+        "code": "priority",
+        "title": "Приоритет",
+        "options": [
+          {
+            "value": "urgent",
+            "text": "Срочно",
+            "icon": "fa fa-bolt",
+            "color": "#dc3545"
+          },
+          {
+            "value": "critical",
+            "text": "Критично",
+            "icon": "fa fa-exclamation-circle",
+            "color": "#bd2130"
+          },
+          {
+            "value": "high",
+            "text": "Важно",
+            "icon": "fa fa-bookmark",
+            "color": "#e67e22"
+          },
+          {
+            "value": "1",
+            "text": "1-я очередь",
+            "icon": "num-icon paren num-1",
+            "color": "#e74c3c"
+          },
+          {
+            "value": "2",
+            "text": "2-я очередь",
+            "icon": "num-icon paren num-2",
+            "color": "#e67e22"
+          },
+          {
+            "value": "3",
+            "text": "3-я очередь",
+            "icon": "num-icon paren num-3",
+            "color": "#f1c40f"
+          },
+          {
+            "value": "4",
+            "text": "4-я очередь",
+            "icon": "num-icon paren num-4",
+            "color": "#2ecc71"
+          },
+          {
+            "value": "5",
+            "text": "5-я очередь",
+            "icon": "num-icon paren num-5",
+            "color": "#95a5a6"
+          }
+        ]
+      },
+      {
+        "code": "score",
+        "title": "Оценка",
+        "options": [
+          {
+            "value": "0",
+            "text": "0",
+            "icon": "fa fa-star-o",
+            "color": "#6c757d"
+          },
+          {
+            "value": "1",
+            "text": "1",
+            "icon": "fa fa-star",
+            "color": "#17a2b8"
+          },
+          {
+            "value": "2",
+            "text": "2",
+            "icon": "fa fa-star",
+            "color": "#17a2b8"
+          },
+          {
+            "value": "3",
+            "text": "3",
+            "icon": "fa fa-star",
+            "color": "#20c997"
+          },
+          {
+            "value": "4",
+            "text": "4",
+            "icon": "fa fa-star",
+            "color": "#28a745"
+          },
+          {
+            "value": "5",
+            "text": "5",
+            "icon": "fa fa-star",
+            "color": "#dc3545"
+          },
+          {
+            "value": "5_plus",
+            "text": "5+",
+            "icon": "fa fa-star",
+            "color": "#ffc107"
+          }
+        ]
+      }
+    ]
+  }
+}

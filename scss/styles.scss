@@ -1,0 +1,323 @@
+// ==========================================
+// 1. Переменные (Variables) — Светлая Ч/Б тема
+// ==========================================
+$color-bg: #ffffff;
+$color-bg-card: #f8fafc;
+$color-bg-soft: #f1f5f9;
+
+$color-text: #0f172a;
+$color-text-muted: #64748b;
+$color-white: #ffffff;
+
+$color-accent: #0f172a;
+$color-accent-hover: #000000;
+$color-accent-ghost: rgba(15, 23, 42, 0.04);
+
+$color-cta-from: #0f172a;
+$color-cta-to: #334155;
+
+$color-border: #e2e8f0;
+
+$font-main: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+$radius-card: 16px;
+$radius-btn: 14px;
+$radius-icon: 10px;
+
+$shadow-main: 0 4px 20px rgba(0, 0, 0, 0.05);
+$shadow-link: 0 2px 8px rgba(0, 0, 0, 0.03);
+$shadow-cta: 0 4px 14px rgba(15, 23, 42, 0.15);
+$shadow-cta-hover: 0 6px 20px rgba(15, 23, 42, 0.25);
+
+$transition-base: 0.15s ease;
+$transition-transform: 0.1s ease;
+
+$bp-desktop: 600px;
+
+
+// ==========================================
+// 2. Миксины (Mixins)
+// ==========================================
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin interactive-lift {
+  transition: transform $transition-transform, box-shadow $transition-base, background $transition-base, border-color $transition-base;
+  &:hover {
+    transform: translateY(-1px);
+  }
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+@mixin card-base {
+  background: $color-bg-card;
+  border: 1px solid $color-border;
+  border-radius: $radius-card;
+  box-shadow: $shadow-main;
+}
+
+
+// ==========================================
+// 3. Базовые стили и Сброс
+// ==========================================
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-main;
+  background: $color-bg;
+  color: $color-text;
+  line-height: 1.55;
+  min-height: 100vh;
+}
+.banner_avatar {
+	background-color: #fff;
+	background-image: url(avatar.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	min-height: 320px;
+}
+
+.container {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+
+// ==========================================
+// 4. Компоненты
+// ==========================================
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 28px;
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid $color-text;
+    box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.08), $shadow-main;
+    margin-bottom: 18px;
+
+    @media (min-width: $bp-desktop) {
+      width: 136px;
+      height: 136px;
+    }
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    margin-bottom: 6px;
+
+    @media (min-width: $bp-desktop) {
+      font-size: 2rem;
+    }
+  }
+
+  .role {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: $color-text;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 14px;
+  }
+
+  .lead {
+    color: $color-text;
+    font-size: 0.98rem;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}
+
+/* Details / Card (Аккордеоны) */
+.card {
+  @include card-base;
+  margin-bottom: 16px;
+  overflow: hidden;
+
+  &[open] {
+    summary::after {
+      transform: rotate(180deg);
+    }
+
+    .content {
+      border-top-color: $color-border;
+      padding-top: 14px;
+    }
+  }
+
+  summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 16px 18px;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    user-select: none;
+    transition: background $transition-base;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: "▾";
+      font-size: 0.9rem;
+      color: $color-text;
+      transition: transform 0.2s ease;
+    }
+
+    &:hover {
+      background: $color-accent-ghost;
+    }
+  }
+
+  .content {
+    padding: 0 18px 18px;
+    color: $color-text;
+    font-size: 0.95rem;
+    border-top: 1px solid transparent;
+
+    p:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    strong {
+      color: $color-text;
+    }
+  }
+}
+
+/* Primary CTA Button */
+.cta {
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  padding: 15px 20px;
+  background: linear-gradient(135deg, $color-cta-from, $color-cta-to);
+  color: $color-white;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: $radius-btn;
+  text-decoration: none;
+  border: none;
+  box-shadow: $shadow-cta;
+  @include interactive-lift;
+
+  &:hover {
+    box-shadow: $shadow-cta-hover;
+  }
+}
+
+/* Links Section */
+.links-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $color-text-muted;
+  margin: 28px 0 12px;
+  text-align: center;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: $color-bg-card;
+  border: 1px solid $color-border;
+  border-radius: $radius-btn;
+  color: $color-text;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.98rem;
+  box-shadow: $shadow-link;
+  @include interactive-lift;
+
+  &:hover {
+    border-color: $color-text;
+    background: $color-accent-ghost;
+  }
+
+  .link-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: $radius-icon;
+    background: $color-bg-soft;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    font-size: 1.1rem;
+  }
+
+  .meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+
+    span:first-child {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    small {
+      color: $color-text;
+      font-size: 0.8rem;
+      font-weight: 400;
+    }
+  }
+}
+
+/* Footer */
+footer {
+  margin-top: 36px;
+  text-align: center;
+  color: $color-text;
+  font-size: 0.8rem;
+
+  a {
+    color: $color-text;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-text;
+    }
+  }
+
+  p + p {
+    margin-top: 6px;
+  }
+}
